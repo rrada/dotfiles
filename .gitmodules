@@ -1,0 +1,13 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "shell/plugins/dircolors-solarized"]
+	path = shell/plugins/dircolors-solarized
+    url = https://github.com/seebi/dircolors-solarized
+    ignore = untracked
+[submodule "vim/pack/vendor/start/vim-colors-solarized"]
+	path = vim/pack/vendor/start/vim-colors-solarized
+    url = https://github.com/altercation/vim-colors-solarized.git
+    ignore = untracked
+

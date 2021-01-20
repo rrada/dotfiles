@@ -1,0 +1,101 @@
+[alias]
+	exec = ! "exec"
+	st = status -sb
+	versions = tag -l --sort=version:refname
+	br = branch -vv
+	bra = branch -vv --all
+	bed = branch --edit-description
+	aa = add --all :/
+	ci = commit -v
+	co = checkout
+	di = diff
+	dis = diff --stat
+	diw = diff --color-words
+	dc = diff --cached
+	dcs = diff --cached --stat
+	dcw = diff --cached --color-words
+	dh = diff HEAD~
+	dhs = diff HEAD~ --stat
+	dhw = diff HEAD~ --color-words
+	du = diff @{u}...
+	dus = diff @{u}... --stat
+	duw = diff @{u}... --color-words
+	grp = grep -C 1
+	ff = merge --ff-only
+	noff = merge --no-ff
+	f = fetch --tags --prune
+	fa = fetch --all --tags --prune
+	pullrb = pull --rebase
+	credit = shortlog -sn
+	lg = log -p
+	gr = log --graph --format=line # graph
+	grd = log --graph --format=detail # graph detail
+	gra = log --graph --format=line --all # graph all
+	grad = log --graph --format=detail --all # graph all in detail
+	sf = show --format=fuller --show-signature
+	sfw = show --format=fuller --color-words
+	stsh = stash --keep-index
+	staash = stash --include-untracked
+	update-submodules = submodule update --init --recursive
+	upgrade-submodules = submodule update --init --remote
+	empty-tree-hash = hash-object -t tree /dev/null
+	root = rev-parse --show-toplevel
+
+[diff]
+	mnemonicPrefix = true
+	wordRegex = "[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"
+	compactionHeuristic = true
+
+[color]
+	ui = auto
+
+[color "grep"]
+	match = cyan bold
+	selected = blue
+	context = normal
+	filename = magenta
+	linenumber = green
+	separator = yellow
+	function = blue
+
+[pretty]
+	line = "%C(auto)%h %<|(60,trunc)%s %C(green)%ad%C(auto)%d"
+	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ad%n %C(auto)%d%n"
+
+[merge]
+	defaultToUpstream = true
+	tool = vimdiff
+
+[pull]
+	ff = only
+
+[mergetool]
+	keepBackup = false
+
+[push]
+	default = upstream
+
+[credential]
+	helper = cache --timeout=3600
+
+[grep]
+	lineNumber = true
+
+[advice]
+	detachedHead = false
+	waitingForEditor = false
+
+[user]
+	useConfigOnly = true
+	email = radek.rada@gmail.com
+	name = rrada
+
+[http]
+	cookieFile = ~/.gitcookies
+
+[core]
+	excludesfile = ~/.gitignore_global
+
+# Allow local customizations in the .gitconfig_local file
+[include]
+	path = ~/.gitconfig_local
