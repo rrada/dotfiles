@@ -7,7 +7,8 @@ source ~/.bash/settings.bash
 # plugins
 source ~/.bash/plugins.bash
 # prompt
-source ~/.bash/prompt.bash
+#source ~/.bash/prompt.bash
+source ~/.bash/trueline.bash
 
 # If not running interactively, don't do anything
 case $- in

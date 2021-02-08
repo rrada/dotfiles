@@ -11,3 +11,6 @@
     url = https://github.com/altercation/vim-colors-solarized.git
     ignore = untracked
 
+[submodule "shell/plugins/trueline"]
+	path = shell/plugins/trueline
+	url = https://github.com/petobens/trueline
