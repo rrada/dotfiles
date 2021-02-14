@@ -42,4 +42,7 @@ fi
 # aliases
 source ~/.shell/aliases.sh
 
-source "$HOME/.cargo/env"
+# local bashrc overrides
+if [ -f ~/.bashrc_local ]; then
+    source ~/.bashrc_local
+fi
